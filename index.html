@@ -84,25 +84,25 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                           <button class="accordion-button fw-bold text-info fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            What's the difference local storage and session storage?
+                            local storage এবং session storage এর মধ্যে পার্থক্য কী ?
                           </button>
                         </h2>
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                           <div class="accordion-body">
-                            <p>Data stays in local storage permanently and as desired data can be set,get and remove at local storage.Local storage data can be shared and modified in different tabs of the browser,window.That modified data goes to all other browser.In local storage the data remains in string state and work as an object.</p>
-                            On the other side, Data not stays in sessoin storage permanently.Session storage object is much less used than local storage object.Session storage exists only in the current tab of the browser and same pages data opening in the different tab brings new storage.Refreshing the browser contains data but off or updating the browser remove the data.
+                            <p>Local storage এ ডেটা  স্থায়ীভাবে থাকে এবং object এর মতো করেও local storage এর মধ্যে ডেটা set,get,remove করা যায়। ব্রাউজারের বিভিন্ন ট‍্যাবে,উইন্ডোর মধ্যে local storage এর ডেটা শেয়ার করা যায় এবং শেয়ার করার কারনে local storage এ ডেটা পরিবর্তন করা যায়। সেই পরিবর্তিত ডেটা অন্য সব ব্রাউজারের ট‍্যাবে চলে যায়।অর্থ‍্যাৎ local storage এর ডেটা remove না করলে একদম স্থায়ী থেকে যায়। local storage এর ডেটা বা key ,value উভয়ই string অবস্থায় থাকে এবং object অনুযায়ীও কাজ করে।</p>
+                           <p>অন‍্যদিকে,session storage এর মধ্যে ডেটা স্থায়ীভাবে থাকে না। local storage এর অবজেক্টের তুলনায় session storage এর object কম use হয়।session storage শুধুমাত্র ব্রাউজারের বর্তমান ট‍্যাবে বিদ‍্যমান থাকে এবং একই page এর ডেটা ভিন্ন ব্রাউজারের ট‍্যাবে open করলে নতুন storage চলে আসে এবং নতুন করে ডেটা set করতে হয়।আবার ব্রাউজার রিফ্রেশ করলে ডেটা থাকে কিন্তু ব্রাউজার বন্ধ বা আপডেট করলে ডেটা মুছে যায়।</p>
                           </div>
                         </div>
                       </div>
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                            How Javascripts Event Loop works ?
+                            জাভাস্ক্রিপ্ট এর ইভেন্ট লুপ কিভাবে কাজ করে ?
                           </button>
                         </h2>
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                           <div class="accordion-body">
-                            All the actions performs or code from the beginning to end of a javascript file can be an single event.When javascript runs the file it puts all these events inside a queue.Handleing each event one by one with loop from this queue is called event loop.functions required to handle events in the queue are stored inthe stack.In the case of nested functions,one by one the child functions are placed inside the stack.the most last child function is executed and its parent function be call.This way the functions are executed one by one until the stack is empty.The next event in handled from the queue after it is completely.This is how Javascripts event loop usually works.
+                            একটি জাভাস্ক্রিপ্ট ফাইল এর কোড রান করলে এটা প্রথম থেকে শেষ পর্যন্ত পুরোটা রিড করে। প্রত্যেকটা ইভেন্টকে একটা queue এর ভিতরে ঢুকায়। এই queue থেকে একটা একটা করে প্রত্যেকটা ইভেন্টকে লুপ করে হ্যান্ডেল করাটাকে ইভেন্ট লুপ বলে। queue তে থাকা ইভেন্টকে হ্যান্ডেল করার জন্য প্রয়োজনীয় ফাংশন stack  মধ্যে রাখা হয়। নেস্টেড ফাংশনের ক্ষেত্রে একটা একটা করে চাইল্ড ফাংশনগুলো কে stack এর ভিতর রাখা হয়। সবথেকে শেষের চাইল্ড ফাংশন টা কে এক্সিকিউট করে সেটার প্যারেন্ট ফাংশন কে কল করা হয়। এভাবে একটা একটা করে ফাংশন গুলোকে execute করা হয় যতক্ষণ না stack খালি হয়ে যায়। সম্পূর্ণ খালি হয়ে যাওয়ার পর queue থেকে পরবর্তী ইভেন্ট কে হ্যান্ডেল করা হয়।
                           </div>
                         </div>
                       </div>
