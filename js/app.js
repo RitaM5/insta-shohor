@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
- likedPostsId.push(id); //1 nmbr
+ likedPostsId.push(id); 
     showPosts(posts);
 };
 
@@ -27,7 +27,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length > 30 ? text.slice(0, 30) + "<span class='fw-bold'>... read more</span>" : text; //3 nmbr
+    return text.length > 30 ? text.slice(0, 30) + "<span class='fw-bold'>... read more</span>" : text; 
   
 };
 
@@ -36,17 +36,19 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "grid";
         document.getElementById( "liked" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
+        document.getElementById('question').style.display = "block";
     } else if (id === "liked") {
         document.getElementById( "liked" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
+        document.getElementById('question').style.display = "none";
 
         displayLikedPosts();
     } else {
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
-
+        document.getElementById('question').style.display = "none";
         displayReportedPosts();
     }
 };
@@ -64,7 +66,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${post.userImage}" alt="User Picture" />//2 nmbr paiciii
+                    <img src="${post.userImage}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
@@ -123,7 +125,7 @@ const createPost = (post) => {
                     <small>
                       <a class="post__name--underline" href="#">
                           ${post.comments[0].user}
-                      </a>                            //4 nmbr ans paiciiiii
+                      </a>                            
                       ${post.comments[0].text}
                     </small>
                   </div>
@@ -146,7 +148,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
-    document.getElementById( "liked" ).innerHTML="";//6 nmbr
+    document.getElementById( "liked" ).innerHTML="";
     likedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "liked" ).appendChild(div);
@@ -156,7 +158,7 @@ const displayLikedPosts = () => {
 const displayReportedPosts = () => {
     //const reportedPosts = getReportedPosts()
     const posts = getReportedPosts();
-    document.getElementById( "reported" ).innerHTML="";//5 nmbr paiciii
+    document.getElementById( "reported" ).innerHTML="";
     posts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
